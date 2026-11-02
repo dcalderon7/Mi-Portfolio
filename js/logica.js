@@ -2,57 +2,63 @@
 const menuMovil = document.getElementById("menuMovil");
 const navEnlaces = document.getElementById("navEnlaces");
 const cerrarMenu = () => {
-  navEnlaces.classList.remove("open");
+  navEnlaces.classList.remove("abierto");
   menuMovil.setAttribute("aria-expanded", "false");
   menuMovil.querySelector("i").className = "bi bi-list";
 };
+
 menuMovil.addEventListener("click", () => {
-  const abierto = navEnlaces.classList.toggle("open");
+  const abierto = navEnlaces.classList.toggle("abierto");
   menuMovil.setAttribute("aria-expanded", String(abierto));
   menuMovil.querySelector("i").className = abierto
     ? "bi bi-x-lg"
     : "bi bi-list";
 });
+
 document
-  .querySelectorAll(".nav-links a")
+  .querySelectorAll(".nav-enlaces a")
   .forEach((a) => a.addEventListener("click", cerrarMenu));
 
 // 2. Animaciones al desplazarse
 const animados = document.querySelectorAll(
-  ".about-copy, .interests, .study-photo, .project, .skill, .education-card, .goals-card, .contact",
+  ".sobre-texto, .intereses, .foto-estudio, .proyecto-card, .habilidad, .formacion-card, .objetivos-card, .contacto",
 );
+
 animados.forEach((el) => {
-  el.classList.add("reveal");
+  el.classList.add("animar");
   const i = [...el.parentElement.children].indexOf(el);
   el.style.setProperty("--d", (i % 5) * 0.07 + "s");
 });
-document
-  .querySelectorAll(".projects-grid, .skills-grid")
-  .forEach((grid) =>
-    [...grid.children].forEach((c, i) =>
-      c.style.setProperty("--d", i * 0.09 + "s"),
-    ),
-  );
+
+document.querySelectorAll(".proyectos-grid, .habilidades-grid").forEach((grid) =>
+  [...grid.children].forEach((card, i) => {
+    card.style.setProperty("--d", i * 0.09 + "s");
+  }),
+);
+
 const observador = new IntersectionObserver(
   (entradas) => {
-    entradas.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("show");
-        observador.unobserve(e.target);
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add("mostrar");
+        observador.unobserve(entrada.target);
       }
     });
   },
   { threshold: 0.12 },
 );
+
 animados.forEach((el) => observador.observe(el));
 
 // 3. Botón volver arriba
 const volverArriba = document.getElementById("volverArriba");
-const header = document.querySelector(".header");
+const navbar = document.querySelector(".navbar");
+
 window.addEventListener("scroll", () => {
-  header.classList.toggle("scrolled", window.scrollY > 10);
+  navbar.classList.toggle("scrolled", window.scrollY > 10);
   volverArriba.classList.toggle("visible", window.scrollY > 400);
 });
+
 volverArriba.addEventListener("click", () =>
   window.scrollTo({ top: 0, behavior: "smooth" }),
 );
@@ -61,15 +67,15 @@ volverArriba.addEventListener("click", () =>
 document.getElementById("anio").textContent = new Date().getFullYear();
 
 // 5. Navegación activa
-const enlacesNav = document.querySelectorAll(".nav-links a");
+const enlacesNav = document.querySelectorAll(".nav-enlaces a");
 const observadorNav = new IntersectionObserver(
   (entradas) => {
-    entradas.forEach((e) => {
-      if (e.isIntersecting) {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
         enlacesNav.forEach((a) =>
           a.classList.toggle(
-            "active",
-            a.getAttribute("href") === "#" + e.target.id,
+            "activo",
+            a.getAttribute("href") === "#" + entrada.target.id,
           ),
         );
       }
@@ -77,6 +83,7 @@ const observadorNav = new IntersectionObserver(
   },
   { rootMargin: "-25% 0px -65% 0px" },
 );
+
 document
   .querySelectorAll("section[id]")
-  .forEach((s) => observadorNav.observe(s));
+  .forEach((section) => observadorNav.observe(section));
