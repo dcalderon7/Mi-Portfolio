@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portafolio personal de David Calderón Arrieta, desarrollador de software.">
+<title>David Calderón | Portafolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/misestilos.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="contenedor nav-contenido">
+    <a href="#inicio" class="logo"><i class="bi bi-code-slash"></i><span>David Calderón</span></a>
+    <button class="menu-movil" id="menuMovil" aria-label="Abrir menú"><i class="bi bi-list"></i></button>
+    <nav class="nav-enlaces" id="navEnlaces">
+      <a href="#inicio" class="activo">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="archivos/curriculum.pdf" class="btn btn-cv" download><i class="bi bi-download"></i> Descargar CV</a>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="contenedor hero-contenido">
+    <div class="hero-texto">
+      <span class="saludo">Hola, soy</span>
+      <h1>David <span>Calderón Arrieta</span></h1>
+      <h2>Desarrollador de Aplicaciones de Software</h2>
+      <p>Transformando ideas en soluciones digitales<br>con código, creatividad y compromiso.</p>
+      <div class="hero-botones">
+        <a href="#proyectos" class="btn"><i class="bi bi-grid"></i> Ver mis proyectos</a>
+        <a href="#contacto" class="btn btn-secundario"><i class="bi bi-envelope"></i> Contáctame</a>
+      </div>
+      <div class="redes">
+        <a href="https://github.com/DavidCalderon" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/david-calderon" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:david.calderon.ari@gmail.com" aria-label="Correo"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="circulo-decorativo"></div>
+      <div class="perfil-contenedor">
+        <img src="https://picsum.photos/seed/perfil-david/640/740" alt="Fotografía de David Calderón" class="perfil-imagen"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="perfil-placeholder"><i class="bi bi-person-fill"></i><span>Tu fotografía</span></div>
+      </div>
+      <p class="nota-manual">Grandes proyectos<br>empiezan con<br>una buena idea</p>
+      <div class="tarjeta-info">
+        <div><i class="bi bi-geo-alt"></i><span>Turrialba, Costa Rica</span></div>
+        <div><i class="bi bi-mortarboard"></i><span>Estudiante / En formación</span></div>
+        <div><i class="bi bi-code-slash"></i><span>Apasionado por la tecnología, la programación y el aprendizaje constante.</span></div>
+      </div>
+      <div class="decoracion-codigo"><i class="bi bi-laptop"></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="sobre-mi">
+  <div class="contenedor sobre-grid">
+    <div class="sobre-texto">
+      <span class="etiqueta">02. SOBRE MÍ</span>
+      <h2 class="titulo-seccion">Conóceme</h2>
+      <p>Soy David Calderón Arrieta, tengo 30 años y vivo en Turrialba, Costa Rica. Actualmente estudio en el INA en el programa de Desarrollo de Aplicaciones de Software.</p>
+      <p>Me apasiona la tecnología, aprender cosas nuevas y crear soluciones que puedan ayudar a las personas. Mi objetivo es convertirme en un gran desarrollador y construir proyectos que generen un impacto real.</p>
+      <div class="datos-personales">
+        <div class="dato"><i class="bi bi-mortarboard"></i><span>Estudiante del INA<small>Turrialba</small></span></div>
+        <div class="dato"><i class="bi bi-phone"></i><span>Enfocado en<small>Android, Web y Backend</small></span></div>
+        <div class="dato"><i class="bi bi-lightbulb"></i><span>Siempre con ganas<small>de aprender</small></span></div>
+      </div>
+    </div>
+
+    <div class="intereses">
+      <h3>Mis intereses</h3>
+      <p class="intereses-sub">Lo que me motiva dentro y fuera del código.</p>
+      <div class="intereses-grid">
+        <div class="interes"><i class="bi bi-code-square"></i><span>Programación</span></div>
+        <div class="interes"><i class="bi bi-gear"></i><span>Tecnología</span></div>
+        <div class="interes"><i class="bi bi-controller"></i><span>Videojuegos</span></div>
+        <div class="interes"><i class="bi bi-music-note-beamed"></i><span>Música</span></div>
+        <div class="interes"><i class="bi bi-tree"></i><span>Naturaleza</span></div>
+        <div class="interes"><i class="bi bi-heart-pulse"></i><span>Fitness</span></div>
+      </div>
+      <div class="frase">
+        <i class="bi bi-quote"></i>
+        <div>
+          <p>No se trata de ser el mejor del mundo, sino de ser mejor que ayer.</p>
+          <span>— David Calderón</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="foto-estudio">
+      <img src="https://picsum.photos/seed/estudio-codigo/800/500" alt="Espacio de estudio" onerror="this.parentElement.classList.add('sin-imagen')">
+    </div>
+  </div>
+</section>
+
+<section class="seccion fondo-azul" id="proyectos">
+  <div class="contenedor">
+    <span class="etiqueta">03. MIS PROYECTOS</span>
+    <div class="encabezado-proyectos">
+      <div>
+        <h2 class="titulo-seccion">Algunos de mis proyectos</h2>
+        <p class="descripcion-seccion">Aquí puedes ver algunos de los proyectos en los que he trabajado. Cada uno representa una parte de mi aprendizaje y crecimiento.</p>
+      </div>
+      <a href="https://github.com/DavidCalderon" target="_blank" class="ver-todos">Ver todos los proyectos <i class="bi bi-arrow-right"></i></a>
+    </div>
+
+    <div class="proyectos-grid">
+      <article class="proyecto-card">
+        <div class="proyecto-imagen"><img src="https://picsum.photos/seed/habitquest/600/400" alt="HabitQuest" onerror="this.parentElement.classList.add('sin-imagen')"><span class="proyecto-icono"><i class="bi bi-controller"></i></span></div>
+        <div class="proyecto-contenido">
+          <h3>HabitQuest</h3>
+          <div class="tecnologias"><span class="t-verde">Android</span><span>Kotlin</span><span>XML</span></div>
+          <p>App de mascota virtual que evoluciona con tus hábitos y actividades. Usa sensores del dispositivo.</p>
+          <a href="#" class="detalles">Ver detalles <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="proyecto-card">
+        <div class="proyecto-imagen"><img src="https://picsum.photos/seed/reparacerca/600/400" alt="ReparaCerca" onerror="this.parentElement.classList.add('sin-imagen')"><span class="proyecto-icono"><i class="bi bi-tools"></i></span></div>
+        <div class="proyecto-contenido">
+          <h3>ReparaCerca</h3>
+          <div class="tecnologias"><span class="t-verde">Android</span><span>Kotlin</span><span class="t-morado">Firebase</span></div>
+          <p>App para conectar usuarios con servicios de reparación cercanos. Interfaz simple, rápida y funcional.</p>
+          <a href="#" class="detalles">Ver detalles <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="proyecto-card">
+        <div class="proyecto-imagen"><img src="https://picsum.photos/seed/turritravels/600/400" alt="Turritravels" onerror="this.parentElement.classList.add('sin-imagen')"><span class="proyecto-icono"><i class="bi bi-globe"></i></span></div>
+        <div class="proyecto-contenido">
+          <h3>Turritravels</h3>
+          <div class="tecnologias"><span class="t-verde">Web</span><span>Bootstrap</span><span class="t-morado">JavaScript</span></div>
+          <p>Sitio web informativo y turístico de Turrialba. Diseño moderno y responsive.</p>
+          <a href="#" class="detalles">Ver detalles <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="proyecto-card">
+        <div class="proyecto-imagen"><img src="https://picsum.photos/seed/turripet/600/400" alt="Turripet" onerror="this.parentElement.classList.add('sin-imagen')"><span class="proyecto-icono"><i class="bi bi-heart"></i></span></div>
+        <div class="proyecto-contenido">
+          <h3>Turripet</h3>
+          <div class="tecnologias"><span class="t-verde">Web</span><span>Bootstrap</span><span class="t-morado">CSS</span></div>
+          <p>Plataforma para servicios veterinarios y cuidado de mascotas en la zona.</p>
+          <a href="#" class="detalles">Ver detalles <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="proyecto-card">
+        <div class="proyecto-imagen"><img src="https://picsum.photos/seed/micajero/600/400" alt="Mi Cajero" onerror="this.parentElement.classList.add('sin-imagen')"><span class="proyecto-icono"><i class="bi bi-cash-stack"></i></span></div>
+        <div class="proyecto-contenido">
+          <h3>Mi Cajero (React Native)</h3>
+          <div class="tecnologias"><span class="t-naranja">React Native</span><span class="t-naranja">JavaScript</span></div>
+          <p>App de cajero automático con saldo, movimientos y navegación simple.</p>
+          <a href="#" class="detalles">Ver detalles <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="habilidades">
+  <div class="contenedor inferior-grid">
+
+    <div>
+      <span class="etiqueta">04. HABILIDADES</span>
+      <h2 class="titulo-seccion">Tecnologías y herramientas</h2>
+      <p class="descripcion-seccion">Estas son algunas de las tecnologías que manejo y las herramientas que utilizo en mis proyectos.</p>
+      <h3 class="grupo-titulo">Tecnologías</h3>
+      <div class="habilidades-grid">
+        <div class="habilidad"><i class="bi bi-android2"></i><h3>Kotlin</h3><p>Android</p></div>
+        <div class="habilidad"><i class="bi bi-cup-hot"></i><h3>Java</h3><p>Programación</p></div>
+        <div class="habilidad"><i class="bi bi-filetype-js"></i><h3>JavaScript</h3><p>React / Vite</p></div>
+        <div class="habilidad"><i class="bi bi-filetype-html"></i><h3>HTML &amp; CSS</h3><p>Bootstrap</p></div>
+        <div class="habilidad"><i class="bi bi-database"></i><h3>MongoDB</h3><p>NoSQL</p></div>
+        <div class="habilidad"><i class="bi bi-server"></i><h3>SQL</h3><p>MySQL</p></div>
+      </div>
+      <h3 class="grupo-titulo">Herramientas</h3>
+      <div class="habilidades-grid">
+        <div class="habilidad"><i class="bi bi-github"></i><h3>Git &amp; GitHub</h3><p>Control de versiones</p></div>
+        <div class="habilidad"><i class="bi bi-code-slash"></i><h3>VS Code</h3><p>Editor</p></div>
+        <div class="habilidad"><i class="bi bi-phone"></i><h3>Android Studio</h3><p>IDE Android</p></div>
+      </div>
+    </div>
+
+    
+    <div class="columna-formacion" id="formacion">
+      <div class="formacion-card">
+        <i class="bi bi-mortarboard icono-grande"></i>
+        <div>
+          <h2>Mi formación</h2>
+          <h3>Instituto Nacional de Aprendizaje (INA)</h3>
+          <p>Turrialba<br>Programa: Desarrollo de Aplicaciones de Software</p>
+          <div class="progreso"><div class="barra"><span></span></div><em>En curso</em></div>
+        </div>
+      </div>
+      <div class="objetivos-card">
+        <i class="bi bi-bullseye icono-grande"></i>
+        <div>
+          <h2>Mis objetivos</h2>
+          <ul>
+            <li><i class="bi bi-check-circle-fill"></i> Terminar mi formación en el INA.</li>
+            <li><i class="bi bi-check-circle-fill"></i> Conseguir mi licencia de conducir.</li>
+            <li><i class="bi bi-check-circle-fill"></i> Mejorar mi nivel de inglés.</li>
+            <li><i class="bi bi-check-circle-fill"></i> Construir mi propia empresa de tecnología.</li>
+            <li><i class="bi bi-check-circle-fill"></i> Seguir aprendiendo y creciendo.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="contacto" class="contacto">
+      <span class="etiqueta">05. CONTACTO</span>
+      <h2 class="titulo-seccion">Hablemos</h2>
+      <p class="descripcion-seccion">Si te interesa conocer más sobre mí, mis proyectos o tienes alguna oportunidad, ¡estaré encantado de conversar!</p>
+      <div class="contacto-datos">
+        <a href="mailto:david.calderon.ari@gmail.com"><i class="bi bi-envelope-fill"></i><span><small>Correo</small>david.calderon.ari@gmail.com</span></a>
+        <a href="#contacto"><i class="bi bi-geo-alt-fill"></i><span><small>Ubicación</small>Turrialba, Costa Rica</span></a>
+        <a href="https://github.com/DavidCalderon" target="_blank"><i class="bi bi-github"></i><span><small>GitHub</small>github.com/DavidCalderon</span></a>
+        <a href="https://www.linkedin.com/in/david-calderon" target="_blank"><i class="bi bi-linkedin"></i><span><small>LinkedIn</small>linkedin.com/in/david-calderon</span></a>
+      </div>
+      <a href="mailto:david.calderon.ari@gmail.com?subject=Mensaje desde mi portafolio" class="btn btn-contacto">Envíame un mensaje <i class="bi bi-send"></i></a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="contenedor footer-contenido">
+    <a href="#inicio" class="logo"><i class="bi bi-code-slash"></i><span>David Calderón</span></a>
+    <p>Gracias por visitar mi portafolio. <i class="bi bi-heart-fill"></i></p>
+    <div class="footer-redes">
+      <a href="https://github.com/DavidCalderon" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/david-calderon" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="mailto:david.calderon.ari@gmail.com" aria-label="Correo"><i class="bi bi-envelope"></i></a>
+    </div>
+  </div>
+  <div class="copyright">© <span id="anio"></span> David Calderón Arrieta. Todos los derechos reservados.</div>
+</footer>
+
+<button class="volver-arriba" id="volverArriba" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="js/logica.js"></script>
+</body>
+</html>
